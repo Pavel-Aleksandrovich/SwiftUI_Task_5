@@ -42,24 +42,18 @@ struct ContentView: View {
     }
     
     var body: some View {
-        let height = UIScreen.main.bounds.height / 4
-        let width = UIScreen.main.bounds.width
-        
         ZStack {
             VStack(spacing: 0) {
                 Rectangle()
-                    .frame(width: width, height: height)
                     .foregroundStyle(.white)
                 Rectangle()
-                    .frame(width: width, height: height)
                     .foregroundStyle(.pink)
                 Rectangle()
-                    .frame(width: width, height: height)
                     .foregroundStyle(.yellow)
                 Rectangle()
-                    .frame(width: width, height: height)
                     .foregroundStyle(.black)
             }
+            .ignoresSafeArea()
             rectangle
         }
     }
